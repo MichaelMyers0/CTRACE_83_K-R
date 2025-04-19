@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+enum {buf_cap = 1024};
+#define INSERT_MACRO(VAR_NAME, VAR_FORMAT, VAR_VALUE)\
+
+static char buf[buf_cap] = {'/', '*'};
 
 main(argc, argv)
 int argc;
 char** argv;
 {
-	if (argc < 2)
+	int n = 0;
+	if (argc < 3)
 	{
 		fprintf(stderr, "ERROR: Provide program name\n");
 		exit(1);
