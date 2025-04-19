@@ -1,5 +1,5 @@
 CC=cc
 CCFLAGS=-Wall -Wextra 
-main:main.c
+ctrace:ctrace.c
 	$(CC) $(CCFLAGS) -g -O $< -o $@
 
